@@ -11,7 +11,7 @@ homepage = "https://github.com/marcuxyz/curlify2"
 keywords = ["python", "curl", "requests", "curlify", "httpx", "convert to curl"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 requests = "^2.24.0"
 responses = "^0.12.0"
 
