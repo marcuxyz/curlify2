@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "curlify2"
-version = "1.0.0"
+version = "1.0.1"
 description = "Library to convert python requests and httpx object to curl command."
-authors = ["Marcus Pereira <hi@marcuspereira.xyz>"]
+authors = ["Marcus Pereira <marcus@negros.dev>"]
 license = "MIT"
 readme = "README.md"
 
@@ -11,14 +11,14 @@ homepage = "https://github.com/marcuxyz/curlify2"
 keywords = ["python", "curl", "requests", "curlify", "httpx", "convert to curl"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = ">=3.6.2,<4.0"
 requests = "^2.24.0"
 responses = "^0.12.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.1.2"
 responses = "^0.12.0"
-black = "^20.8b1"
+black = ">=21.7b0"
 pytest-httpx = "^0.10.0"
 
 [build-system]
