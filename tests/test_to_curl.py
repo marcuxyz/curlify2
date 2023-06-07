@@ -25,7 +25,7 @@ def test_returns_curl_string_using_httpx_module(httpx_mock):
         curl = to_curl(response.request)
         assert (
             curl
-            == 'curl -X GET -H "host: test_url" -H "accept: */*" -H "accept-encoding: gzip, deflate" -H "connection: keep-alive" -H "user-agent: python-httpx/0.16.1" -d '
+            == 'curl -X GET -H "host: test_url" -H "accept: */*" -H "accept-encoding: gzip, deflate" -H "connection: keep-alive" -H "user-agent: python-httpx/0.24.1" -d '
             "'"
             "b"
             "'"
