@@ -16,7 +16,6 @@ python = ">=3.7,<4.0"
 [tool.poetry.group.dev.dependencies]
 requests = "^2.31.0"
 pytest = "^7.3.1"
-responses = "^0.22.0"
 black = ">=21.7b0"
 pytest-httpx = "^0.22.0"
 
