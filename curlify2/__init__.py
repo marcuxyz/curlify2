@@ -1,3 +1,3 @@
-from .curlify import to_curl
+from .curlify import Curlify
 
-__all__ = ["to_curl"]
+__all__ = ["Curlify"]

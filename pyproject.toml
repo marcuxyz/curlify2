@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "curlify2"
-version = "1.0.3"
+version = "2.0.0"
 description = "Library to convert python requests and httpx object to curl command."
 authors = ["Marcus Pereira <marcus@negros.dev>"]
 license = "MIT"
