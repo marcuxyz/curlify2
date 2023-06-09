@@ -20,16 +20,15 @@ $ poetry add curlify2
 using **requests** module:
 
 ```python
-import curlify2
+from curlify2 import Curlify
 import requests
 
 URL = "https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f"
 
 request = requests.get(URL)
-curl = curlify2.to_curl(request.request)
+response = Curlify(request.request)
 
-print(curl) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
-
+print(response.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
 ```
 
 using **httpx** module:
@@ -41,8 +40,7 @@ import httpx
 URL = "https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f"
 
 request = httpx.get(URL)
-curl = curlify2.to_curl(request.request)
+response = Curlify(request.request)
 
-print(curl) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
-
+print(response.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
 ```
