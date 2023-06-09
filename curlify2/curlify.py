@@ -30,9 +30,9 @@ class Curlify:
         body = self.body()
 
         if body and isinstance(body, bytes):
-            return self.body.decode()
+            return body.decode()
 
-        return self.body()
+        return body
 
     def quote(self) -> str:
         """build curl command
