@@ -34,7 +34,7 @@ print(response.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" 
 using **httpx** module:
 
 ```python
-import curlify2
+from curlify2 import Curlify
 import httpx
 
 URL = "https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f"
