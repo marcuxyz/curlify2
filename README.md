@@ -25,10 +25,10 @@ import requests
 
 URL = "https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f"
 
-request = requests.get(URL)
-response = Curlify(request.request)
+response = requests.get(URL)
+curlify = Curlify(response.request)
 
-print(response.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
+print(curlify.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
 ```
 
 using **httpx** module:
@@ -39,8 +39,8 @@ import httpx
 
 URL = "https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f"
 
-request = httpx.get(URL)
-response = Curlify(request.request)
+response = httpx.get(URL)
+curlify = Curlify(response.request)
 
-print(response.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
+print(curlify.to_curl()) # curl -X GET -H "User-Agent: python-requests/2.24.0" -H "Accept-Encoding: gzip, deflate" -H "Accept: */*" -H "Connection: keep-alive" -d 'None' https://run.mocky.io/v3/b0f4ffd8-6696-4f90-8bab-4a3bcad9ef3f
 ```
